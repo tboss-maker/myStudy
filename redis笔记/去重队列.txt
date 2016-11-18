@@ -1,0 +1,4 @@
+//可以使用有序集合来实现队列的无重复
+主要使用zadd('key',time(),'value')
+zrange('key',0,0)[0]
+zdelete(zrange('key',0,0)[0])

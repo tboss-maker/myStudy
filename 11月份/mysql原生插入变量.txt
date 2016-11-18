@@ -1,0 +1,5 @@
+//一定要注意语句的编写(以下列格式为准)
+//普通变量
+$sql = "insert into table values('{$a}','{$b}','{$c}')";
+//数组变量
+$sql = "insert into table values('{$arr["username"]}','{$arr["age"]}','{$arr["num"]}')";

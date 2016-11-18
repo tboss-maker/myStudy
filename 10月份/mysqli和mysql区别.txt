@@ -1,0 +1,3 @@
+mysql和mysqli的链接不一样
+mysql每次都会新开一个链接,而mysqli每次会用同一个链接(默认长连接)
+如果非要用mysql实现长连接,使用mysql_pconnect()

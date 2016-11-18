@@ -1,0 +1,4 @@
+没有环境变量的PHP运行
+使用whereis php查找到php配置在哪儿
+然后使用php的路径加php调用脚本
+/usr/local/php/bin/php -f timer_stock_init.php 

@@ -1,0 +1,5 @@
+如果提示soapclient不存在,则开启,phpsoap扩展
+
+提示各种错误的时候
+php soap文件缓存的原因，只要在php.ini里设置：soap.wsdl_cache_enabled=0，
+重启apache

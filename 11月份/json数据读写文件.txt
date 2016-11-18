@@ -1,0 +1,8 @@
+//jsonÐ´ÈëÎÄ¼þ
+$arr = [];
+$arr[] = ['user'=>'lion','age'=>24];
+$arr[] = ['user'=>'jim','age'=>30];
+file_put_contents($filename,$arr);
+
+
+//json

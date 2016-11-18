@@ -1,0 +1,20 @@
+//创建用户
+create user 'user'@'localhost' identified by 'password';
+
+//删除用户
+drop user 'user'@'localhost'
+
+//查看当前用户的权限
+show grants;
+
+//给制定用户授权
+grant all privileges on *.* to 'user'@'localhost';
+(权限:select update delete)
+(*.* 数据库.数据表)
+
+//修改密码
+grant all privileges on *.* to 'user'@'localhost' identified by 'newpassword';
+
+//回收权限
+revoke all privilege on *.* 'from user'@'localhost';
+

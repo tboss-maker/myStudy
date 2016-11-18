@@ -1,0 +1,7 @@
+//添加单条记录
+$redis->hset('h','key1','value1')
+向h的哈希中添加一条记录key1=>value1
+
+//添加多条记录
+$redis->hmset('h',['key1'=>'value1','key2'=>'value2'])
+向h的哈希批量添加数据
