@@ -1,0 +1,10 @@
+在类中写个main 方法，  点击右键， 有运行，debug；  和ecplise一样。
+
+这里面有个坑， 你写的main方法的格式一定要满足以下的格式：
+
+public static final void main(String[] args){
+        // do something
+
+}
+
+如果不满足这个格式 ，就无法运行， 比如， 没有加String[] args 这个参数， 在ecplise中是没有问题的， 但是在idea中就不能运行。
