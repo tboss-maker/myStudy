@@ -1,0 +1,12 @@
+默认目录是/var/www/html下。修改方法：
+打开/etc/httpd/conf/httpd.conf文件，找到下面这行
+DocumentRoot "/var/www/html"
+可以改成你想要的目录。
+-----------------------------------------------------------
+apache的默认重要配置信息如下：
+配置文件：/etc/httpd/conf/http.conf
+服务器的根目录：/var/www/html
+访问日志文件：/var/log/httpd/access_log
+错误日志文件：/var/log/httpd/error_log
+运行apache的用户：apache
+运行apache的组：apache端口：80模块存放路径：/usr/lib/httpd/modules

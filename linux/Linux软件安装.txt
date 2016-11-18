@@ -1,0 +1,31 @@
+rpm  -ivh  软件包全名
+> rpm  -q   软件包名(完整)   //query查看软件是否有安装
+> rpm  -e   软件包名        	//卸载软件
+> rpm  -qa   				//query all  查看系统里边全部rpm方式安装的软件
+> rpm  -qa |  grep ftpd			//模糊查找指定软件ftpd是否有安装
+
+vm桥接
+cd /etc/sysconfig/network-scripts
+cp ifcfg-eth0 ./ifcfg-eth0.bak
+ONBOOT=YES BOOTPROTO=STATIC IPADDR= NETMASK=255.255.255.0
+service network restart 
+ping IP
+
+注：防火墙的基本操作命令：
+查询防火墙状态:
+[root@localhost ~]# service   iptables status<回车>
+ 
+停止防火墙:
+[root@localhost ~]# service   iptables stop <回车>
+ 
+启动防火墙:
+[root@localhost ~]# service   iptables start <回车>
+ 
+重启防火墙:
+[root@localhost ~]# service   iptables restart <回车>
+ 
+永久关闭防火墙:
+[root@localhost ~]# chkconfig   iptables off<回车>
+ 
+永久关闭后启用:
+[root@localhost ~]# chkconfig   iptables on<回车>
