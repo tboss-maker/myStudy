@@ -8,7 +8,7 @@
  * mac地址处理
  * @param $mac
  * @param int $mac_len默认12位
- * @retrun mixed bool/string 处理失败返回false;成功返回正确格式的mac地址(例如:11-11-11-11-11-11)
+ * @retrun mixed bool/string 处理失败返回false;成功返回正确格式的mac地址12位的16进制(例如:11-11-11-11-11-11)
  *
  */
 function mac_format_deal($mac,$mac_len=12){
@@ -18,7 +18,7 @@ function mac_format_deal($mac,$mac_len=12){
     $mac = str_replace($first,$map,$mac);
 
     //开始验证mac是否合法
-    $patten = "/[\'.,:-;*?~`!@#$%^&+=)(<>{}]|\]|\[|\/|\\\|\"|\|/";
+    $patten = "/[g-zG-Z\'.,:-;*\/?\"~`\[!\]\|@#$%^&+=\\\)(<>{}]/";
     //是否包含特殊字符(键盘上面的),包含则直接返回错误
     if(preg_match($patten,$mac)){
         return false;
@@ -45,10 +45,16 @@ function mac_format_deal($mac,$mac_len=12){
     }
     return $tmp_mac;
 }
-
-$a='1111111&11:1-1-1';
-$a = mac_format_deal($a);
-if(!$a){
-    echo '失败';exit;
-}
-echo $a;
+$a = '123+';
+$patten = "/[g-zG-Z\'.,:-;*\/?\"~`\[!\]\|@#$%^&+=\\\)(<>{}]/";
+if (preg_match($patten,$a)){
+    echo '有错误字符';
+}else{
+    echo '没有错误字符';
+};
+//$a='1111111G-1:1-1-1';
+//$a = mac_format_deal($a);
+//if(!$a){
+//    echo '失败';exit;
+//}
+//echo $a;
