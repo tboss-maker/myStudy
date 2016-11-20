@@ -3,7 +3,6 @@
  * author:zhaosuji
  * time: 2016/11/19  17:05
  **/
-$mysql = new mysqli('localhost','root','','test');
 $time = date('Y-m-d',strtotime('1990-11-26'));
 $time2 = date('Y-m-d',strtotime("-1 day"));
 //过去一年
@@ -13,15 +12,19 @@ $time4 = date('Y-m-d',strtotime("+1 week"));
 //本月
 $time5 = date('Y-m-d',strtotime("this month"));
 //上月全部
+//本季度
+//获取本季度第几季度
+$season = ceil(date('m')/3);
+//季度开始
+$begin_month = $season*3-2;
+$time1 = date("Y-$begin_month-01");
+//季度结束
+$over_month = $season*3;
+$time2 = date("Y-$over_month-31");//直接计算31天为最后一天,可以包含所有
 
 echo $time5;exit;
 //echo $time3;exit;
 $sql = "select * from old_table where time2 between '{$time4}' and '{$time5}'";
-$result = $mysql->query($sql);
-echo '<pre>';
-while($row = $result->fetch_row()){
-    print_r($row);
-}
 
 //1.获取上个月第一天及最后一天.
    echo date('Y-m-01', strtotime('-1 month'));
