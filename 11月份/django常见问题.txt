@@ -1,2 +1,4 @@
 °²×°ÃüÁî
 python.exe setup.py install
+Ğ¶ÔØ
+install Django
