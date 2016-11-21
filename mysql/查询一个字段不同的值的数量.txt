@@ -1,0 +1,2 @@
+//查询一个字段里有不同值的数量
+select count(distinct(target_field)) from table_name;
