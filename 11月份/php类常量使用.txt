@@ -1,0 +1,5 @@
+//在php类中使用类常量 常量值只能是标量，string，bool，integer，float，null
+const AAA = '123';
+
+//访问的时候
+self::AAA;
