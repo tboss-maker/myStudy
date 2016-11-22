@@ -1,2 +1,0 @@
-//只有年份计算年龄
-select id,2013-birth as age from student where 2013-birth between 18 and 22;

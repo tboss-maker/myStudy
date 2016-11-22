@@ -1,3 +1,0 @@
-//sql中空和null不一样
-select * from table_name where name=null;
-select * from table_name where name='';
