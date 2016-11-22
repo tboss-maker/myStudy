@@ -1,0 +1,32 @@
+Route::get('/', function () {
+    return view('welcome');
+});
+//基本路由
+Route::get('base1',function(){
+    return '这是模板1';
+});
+Route::get('base2',function(){
+    return '这是模板2';
+});
+//多路由匹配
+Route::match(['get','post'],'multi',function(){
+    return 'many1';
+});
+
+Route::any('many2',function(){
+    return 'many2';
+});
+
+Route::get("id/{id}",function($id){
+    return $id;
+});
+
+//正则验证
+Route::get('user/{id}/{name}',function($id,$name){
+    return "user-id:{$id}<br/>"."user-name:{$name}";
+})->where(['id'=>'[0-9]+','name'=>'[a-zA-Z]+']);
+
+//别名
+Route::get('user/member-center',['as'=>'center',function(){
+    return 'member-center';
+}]);

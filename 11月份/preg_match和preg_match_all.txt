@@ -1,0 +1,11 @@
+preg_match只匹配一次,preg_match_all是全文匹配,即所有跟表达式一致的都找出来
+//深入理解
+preg_macth()返回值是0或者1 表示匹配的次数(0:没有匹配,1:匹配到1次)
+
+
+preg_macth_all($pattern,$a)返回值false或者符合条件的所有值的次数(匹配全文)
+
+//想要输出匹配结果
+preg_match_all($pattern,$a,$content)(返回全部)
+preg_match($pattern,$a,$content)(返回一次匹配)
+$content就是匹配的结果
