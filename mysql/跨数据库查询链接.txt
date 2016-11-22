@@ -1,0 +1,5 @@
+1.建立两个数据库连接，查询的时候分别调用。
+2.使用dbname.tablename的方式来写from，或者join（前提是你用于连接MYSQL的帐号必须同时可以访问这两个库）
+例如：dba，dbb
+select * from dba.table1 as t1
+join dbb.table1  as t2  on t1.id = t2.id
