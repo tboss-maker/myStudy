@@ -1,0 +1,4 @@
+//想从date格式取数据
+//例如只取年月日
+select DATE_FORMAT(a.create_time,'%Y-%m-%d')
+select DATE_FORMAT(a.create_time,'%Y-%m-%d %H:%i:%s')

@@ -1,0 +1,10 @@
+//having用法
+1.HAVING子句必须位于GROUP BY之后ORDER BY之前
+2.HAVING子句可以引用总计函数，而WHERE子句不能引用
+3.如果HAVING子句引用了一个意义不明确的列，则会出现警告。在下面的语句中，col2意义不明确，因为它既作为别名使用，又作为列名使用：mysql> SELECT COUNT(col1) AS col2 FROM t GROUP BY col2 HAVING col2 = 2;
+4.SQL标准要求HAVING必须引用GROUP BY子句中的列或用于总计函数中的列
+5.不要将HAVING用于应被用于WHERE子句的条目，从我们开头的2条语句来看，这样用并没有出错，但是mysql不推荐。
+
+
+//having问题语句
+select nns_cp_id,count(nns_cp_id) as order_num,sum(nns_money) as total_price from nns_pay_order where  nns_create_time between '2016/10/01' and '2016/10/31' group by nns_cp_id having nns_cp_id <> ''
