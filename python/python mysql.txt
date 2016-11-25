@@ -1,0 +1,4 @@
+python链接mysql必须使用mysql库
+使用PyMysql
+安装 pip install PyMysql
+python3必须安装vc2010 C++

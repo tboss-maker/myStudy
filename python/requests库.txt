@@ -1,0 +1,2 @@
+content和text区别
+text使用了encoding属性编码过，而content是原始字符串。
