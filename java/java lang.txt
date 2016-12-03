@@ -1,0 +1,8 @@
+单引号是char字符类型(只能用引一个字符)
+双引号string对象类型,只能是string字符串
+单引号只能引一个字符
+而双引号可以引0个及其以上
+
+String对象和StringBuffer对象
+String不可变
+StringBuffer可变 只能用StringBuffer s = new StringBuffer();
