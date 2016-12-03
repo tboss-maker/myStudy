@@ -1,0 +1,4 @@
+JAVA_HOME:就是java的安装路径(“C:\jdk1.6”)
+path:系统环境变量,就是可以再任何路径下识别java命令(“.;%JAVA_HOME%\bin”)
+CLASS_PATH:java类环境(类库)(“.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar)
+(要加.表示当前路径)”
