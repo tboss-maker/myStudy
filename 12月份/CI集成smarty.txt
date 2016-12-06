@@ -1,0 +1,62 @@
+ci框架集成smarty引擎
+1.解压smarty-3.1.27到CI项目中的application\libraries下面，其他的文件删除。
+
+2. 在application\libraries目录下创建Ci_smarty.php文件
+
+if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+require(APPPATH.'libraries/smarty-3.1.27/libs/Smarty.class.php');
+class Ci_smarty extends Smarty {
+ protected $ci;
+ public function __construct()
+ {
+  parent::__construct();
+  $this->ci = & get_instance();
+  $this->ci->load->config('smarty');//加载smarty的配置文件
+  $this->cache_lifetime =$this->ci->config->item('cache_lifetime');
+  $this->caching = $this->ci->config->item('caching');
+  $this->config_dir = $this->ci->config->item('config_dir');
+  $this->template_dir = $this->ci->config->item('template_dir');
+  $this->compile_dir = $this->ci->config->item('compile_dir');
+  $this->cache_dir = $this->ci->config->item('cache_dir');
+  $this->use_sub_dirs = $this->ci->config->item('use_sub_dirs');
+  $this->left_delimiter = $this->ci->config->item('left_delimiter');
+  $this->right_delimiter = $this->ci->config->item('right_delimiter');
+ }
+}
+
+
+3.在application\config目录下创建配置文件smarty.php
+
+ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+ $config['cache_lifetime'] = 60;
+ $config['caching'] = false;
+ $config['template_dir'] = APPPATH .'views';
+ $config['compile_dir'] = APPPATH .'views/template_c';
+ $config['cache_dir'] = APPPATH . 'views/cache';
+ $config['config_dir'] = APPPATH . 'views/config';
+ $config['use_sub_dirs'] = false; //子目录变量(是否在缓存文件夹中生成子目录)
+ $config['left_delimiter'] = '{';
+ $config['right_delimiter'] = '}';
+
+4.在application\core创建MY_controller.php
+
+class MY_controller extends CI_Controller {
+ public function __construct() {
+ 
+  parent::__construct();
+ }
+ public function assign($key,$val)
+ {
+  $this->ci_smarty->assign($key,$val);
+ }
+ 
+ public function display($html)
+ {
+  $this->ci_smarty->display($html);
+ }
+}
+
+5.application\config\autoload.php
+的结尾行添加下面这一句就成功了！
+
+$autoload['libraries'] = array('Ci_smarty');
