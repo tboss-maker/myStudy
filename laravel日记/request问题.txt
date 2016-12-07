@@ -1,0 +1,2 @@
+Request需要用路径
+use Illuminate\Http\Request;
