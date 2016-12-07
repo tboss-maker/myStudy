@@ -1,0 +1,16 @@
+项目地址:http://localhost/articles
+1.简单模式
+<a href="{{ url('/articles') }}">链接</a>
+// or <a href="{{ URL::to('/articles') }}">链接</a>
+
+2.路由模式
+
+URL::route('articles.index');
+
+3.控制器动作模式
+
+URL::action('ArticlesController@index');
+
+特殊情况:
+现在，路由变得更加复杂了，我们定义了一个这样的：
+Route::controller('users','UsersController');
