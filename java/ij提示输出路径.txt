@@ -1,0 +1,4 @@
+ij idea提示没有output path解决方法
+
+1.点击工具栏的File按钮----》project structure（或者选中project按键盘的F4）打开项目结构面板。
+2.点击Project Settings 下的Project，在Project compiler output中点击最右边的  ...  指定你的项目目录下的output文件夹（如果你的目录下没有，自己手动创建一个），然后点ok确定项目配置即可。
