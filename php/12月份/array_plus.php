@@ -26,8 +26,14 @@ function merge_by_query($arr){
         }
     }
     $arr[] = array('currency'=>'RMB','money'=>$temp);
-    return $arr;
+    $string = '';
+    foreach($arr as $v){
+        $string .= implode('',$v).'/';
+    }
+    $string = rtrim('/',$string);
+    return $string;
 }
 
 echo '<pre>';
-print_r(merge_by_query($arr));
+echo merge_by_query($arr);
+//print_r(merge_by_query($arr));
