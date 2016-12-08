@@ -1,0 +1,7 @@
+laravel blade模板中输出变量类型
+1.json格式的数据
+$a.name
+2.数组格式的数据
+$a['name']
+3.stdclass对象(数据库查询)
+$a->name
