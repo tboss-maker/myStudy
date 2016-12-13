@@ -1,0 +1,10 @@
+//update join
+updata table_1 as a inner join table_2 as b on a.a_id = b.id set a.field1=1,a.field2=2,b.field3=3 where a.field4 = 1;
+
+select * from admin where admin_name in (select admin_name from admin group by admin_name having count(`id`)>1);
+//删除表中多余的重复记录(留id最小)
+//单个字段
+$sql = "delete from 表名 where 字段名 in ";
+$sql .= "(select 字段名 from 表名 group by 字段名 having count(字段名) > 1)  ";
+$sql .= "and 主键ID not in ";
+$sql .= "(select min(主键ID) from 表名 group by 字段名 having count(字段名 )>1) ";
