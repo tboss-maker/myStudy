@@ -1,0 +1,6 @@
+格式如:
+ArrayList<String> a = new ArrayList()
+表示只能添加String类型的数据
+ArrayList a = new ArrayList<String>()
+表示会把接受类型转化成String类型
+
