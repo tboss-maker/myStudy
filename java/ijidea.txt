@@ -1,5 +1,0 @@
-sout 输出System.out.println()
-psvm 创建main方法
-for 创建for()
-fori 创建简单的for循环体
-其他的可以看ctrl+j
