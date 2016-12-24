@@ -1,0 +1,5 @@
+$arr = array("name"=>"tom","money"=>500,"age"=>24);
+$arr = json_encode($arr);
+define("TEST",$arr);
+$arr = json_decode(TEST,true);
+
