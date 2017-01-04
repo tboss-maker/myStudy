@@ -1,0 +1,9 @@
+JSP：全名为Java Server Pages，中文名叫java服务器页面，其根本是一个简化的Servlet设计，它[1]  是由Sun Microsystems公司倡导、许多公司参与一起建立的一种动态网页技术标准。JSP技术有点类似ASP技术，它是在传统的网页HTML（标准通用标记语言的子集）文件(*.htm,*.html)中插入Java程序段(Scriptlet)和JSP标记(tag)，从而形成JSP文件，后缀名为(*.jsp)。 用JSP开发的Web应用是跨平台的，既能在Linux下运行，也能在其他操作系统上运行。
+
+Action:Action类是用户请求和业务逻辑之间的桥梁，每个Action充当客户的一项业务代理。是MVC模式中Control层
+
+Service:service层是在mcv三层模式中新添加一层，能够更加清晰的定义应用程序的边界，需要操作数据的时候，通过service层访问DAO层来实现。service层做的事情，不仅仅是调用DAO操作数据，还会包含了一定的业务逻辑。整个程序的设计，也变成了针对服务进行设计。
+
+DAO：Data Access Object是一个数据访问接口，数据访问：顾名思义就是与数据库打交道。夹在业务逻辑与数据库资源中间。是MVC模式中Model层
+
+PO：Persistent Object即持久对象，它们是由一组属性和属性的get和set方法组成。可以看成是与数据库中的表相映射的java对象
