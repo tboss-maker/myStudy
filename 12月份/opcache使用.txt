@@ -1,0 +1,5 @@
+php zend opcache
+代码缓存:
+例如一个页面有多个include文件,他会给合并成一个文件作为缓存,
+减少服务器的IO操作,加载更快
+(phpstudy直接开启就可以)
