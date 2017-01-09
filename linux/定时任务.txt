@@ -1,0 +1,10 @@
+centos使用使用crontab(centos是crond ubantu是cron)
+crontab -u 查找用户
+crontab -l 查看定时任务列表
+crontab -e 编辑定时任务
+crontab -r 删除某个用户的定时任务
+
+格式:
+*(分钟) *(小时) *(天) *(月) *(周) command
+*/5 * * * * command (每5分钟执行)
+* * * * * sleep 10; command (可以执行秒级操作)

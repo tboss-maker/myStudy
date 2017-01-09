@@ -1,0 +1,2 @@
+在php.ini中
+添加date.timezone = PRC可以解决date报错

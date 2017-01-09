@@ -1,0 +1,24 @@
+使用变量的时候不要使用空格
+例如a=1不要用a = 1(这样就识别不到a)
+
+//要让shell脚本成为可执行文件(可以直接执行 ./test.sh)
+在shell文件末尾加上chmod +x ./test.sh,然后正常执行一次,以后就可以直接使用了
+
+或者在linux中使用chmod +x ./test.sh来手动执行
+
+no crontab for root
+
+这个问题非常简单，同样在 root 用户下输入 crontab -e
+
+按 Esc 按： wq   回车
+
+在输入 crontab -l 就没有问题了
+
+查看下已经设置好的计划任务
+cat /etc/crontab
+重启下计划任务服务
+/etc/init.d/crond restart
+
+上面一步如果OK就不用这步
+查看下日志找到错误原因
+cat /var/log/cron

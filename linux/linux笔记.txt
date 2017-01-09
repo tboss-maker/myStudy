@@ -10,3 +10,24 @@ apache的默认重要配置信息如下：
 错误日志文件：/var/log/httpd/error_log
 运行apache的用户：apache
 运行apache的组：apache端口：80模块存放路径：/usr/lib/httpd/modules
+
+In命令
+这是linux中一个非常重要命令，请大家一定要熟悉。它的功能是为某一个文件或目录在另外一个位置建立一个同步的链接，类似Windows下的超级链接。
+
+这个命令最常用的参数是-s，具体用法是：
+sudo ln -s 源文件 目标文件 
+
+当前目录是/local，而我经常要访问/usr/local/linux/work
+
+那么我就可以使用在local下建立一个文件linkwork，
+
+然后sudo ln -s /usr/local/linux/work  /local/linkwork
+
+即建立两者之间的链接。
+
+
+
+删除链接
+
+rm -rf   symbolic_name   注意不是rm -rf   symbolic_name/ 
+那么上面我就是rm -rf   /local/linkwork

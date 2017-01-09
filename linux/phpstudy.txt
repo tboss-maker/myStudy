@@ -1,0 +1,18 @@
+linux下如何使用mysql
+ln -s /phpstudy/mysql/bin/mysql /bin
+
+wget -c http://lamp.phpstudy.net/phpstudy-all.bin
+chmod +x phpstudy.bin    #权限设置
+./phpstudy.bin 　　　　#运行安装
+
+如何切换php版：
+假如你先安装的apache+php5.3
+想切换成nginx+php5.4
+你就再走一次./phpstudy.bin
+但是你会发现有一行是否安装mysql提示选不安装
+这样只需要编译nginx+php5.4
+从而节省时间，这样只需要几分钟即可。
+
+服务进程管理：phpstudy (start|stop|restart|uninstall)
+站点主机管理：phpstudy (add|del|list)
+ftpd用户管理：phpstudy ftp (add|del|list)

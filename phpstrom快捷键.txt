@@ -1,0 +1,8 @@
+//大小写快捷键
+ctrl+shift+u
+//显示函数
+alt+7(关闭,点击左下角)
+shift+ctrl+alt+n查找函数
+ctrl+shift+z前进
+ctrl+r替換
+ctrl+f
