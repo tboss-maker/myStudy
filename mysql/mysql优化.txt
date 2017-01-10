@@ -1,0 +1,39 @@
+1.mysql查询缓存
+查询缓存:当查询接收到一个和之前同样的查询,服务器将会从查询缓存中检索结果,而不是再次分析和执行上次的
+查询。
+
+修改mysql配置文件中的query_cache_size和query_cache_type
+
+使用group by 索引就不会生效
+like '%name%'索引不会生效 
+like 'name%'才会生效
+
+query_cache_type:0关闭缓存 
+1开启缓存(默认开启select  sql_no_cache name from wei where id=2 ) 
+2有条件开启缓存(select  sql_cache name from wei where id=4 )
+
+explain语句然后根据情况来优化缓存
+
+当只要一行数据时,使用limit 1
+因为这样mysql会在找到一条之后就停止搜索,而不是继续往后查找下一条符合记录的数据
+
+为搜索字段增加索引
+alter table tablename add index index_name(field_name),add index index_name2(field_name2);
+alter table tablename drop index index_name;
+
+join操作的两张表,被用来jion的字段应该是相同类型的。否则索引将不起作用,对于string类型的,还必须是相同的字符集
+
+千万不要使用ORDER BY RAND()
+
+避免使用select *(增加网络传输负担)
+
+永远为每张表设置一个ID
+
+使用enum而不是varchar
+
+尽可能使用not null
+
+尽可能使用prepared statement
+
+
+
