@@ -1,0 +1,15 @@
+重写对象的toString方法
+class student{
+   private int id;
+  private String password;
+ private String username;
+
+public String toString(){
+  return id +"," +password + "," + username;
+}
+
+这样你就可以直接调用
+for (int i = 0; i < list.size(); i++) {
+	System.out.println(list.get(i).toString());
+}
+输出时这样的但是我要的是=后面值

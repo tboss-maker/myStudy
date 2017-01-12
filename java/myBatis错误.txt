@@ -1,0 +1,4 @@
+idea经常性提示找不到配置文件(其中包括properties和xml)
+需要将配置文件(xml和properties)放进resource路径中,
+并且在写配置文件路径时,也必须写完整路径
+例如config/mapper/userMapper.xml,config/db.properties

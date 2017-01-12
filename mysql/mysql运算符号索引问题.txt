@@ -1,0 +1,9 @@
+mysql使用>= 或者 <时会无法命中索引
+需要使用between and才能命中索引
+
+date或timestamp格式数据不能创建联合索引,因为不起作用
+需要分开创建索引
+
+"select %s from %s where nns_state=1 and nns_type_id=%d and".
+                                    " (nns_begin_time BETWEEN '1970-01-01 00:00:00' and '%s') and (nns_end_time between '%s' and '{$now}')".
+                                    " and nns_global_state=%d and nns_species=%d",
