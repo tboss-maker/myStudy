@@ -1,0 +1,1 @@
+在配置完成本地tomcat之后,点击右下角fix,然后添加deployment
