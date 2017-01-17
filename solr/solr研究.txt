@@ -1,0 +1,5 @@
+找到solr/example
+命令行输入
+java -jar start.jar //开启solr自带服务器
+
+java -jar start,jar --stop 关闭该服务器

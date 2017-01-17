@@ -1,0 +1,5 @@
+from dir.file import function1,function2
+
+例如
+from test.new import *
+从文件夹test的new.python文件中导入全部函数
