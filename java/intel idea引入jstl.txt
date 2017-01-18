@@ -1,0 +1,7 @@
+1.首先下载(菜鸟)jstl文件
+
+2.然后去setting中搜索DTDS,找到Schemas and DTDS
+
+3.在External Schemas中添加url http://java.sun.com/jsp/jstl/core
+
+4.在explore中找到对应的jstl文件引入c.tld文件
