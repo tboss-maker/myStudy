@@ -5,3 +5,7 @@
 3.在External Schemas中添加url http://java.sun.com/jsp/jstl/core
 
 4.在explore中找到对应的jstl文件引入c.tld文件
+
+5.JSP文件头加入
+<%@ taglib prefix="c" 
+           uri="http://java.sun.com/jsp/jstl/core" %>
