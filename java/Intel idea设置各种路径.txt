@@ -1,0 +1,4 @@
+jar包是在project structure里面module的Dependencies中添加
+
+关于各种路径设置:
+同样在project structure里面module的Sources设置,将对应的文件设置成对应的路径就可以
