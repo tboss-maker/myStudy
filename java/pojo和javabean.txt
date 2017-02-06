@@ -1,0 +1,10 @@
+POJO（Plain Ordinary Java Object）：
+1、一个普通的JAVA类；
+2、有set./get方法；
+3、没有任何业务方法、业务逻辑；
+当一个Pojo可序列化，有一个无参的构造函数，使用getter和setter方法来访问属性时，他就是一个JavaBean。
+
+JavaBean
+1、除了有POJO的特点外，还具有其他业务逻辑；
+2、通过set/get方法访问；
+3、可序列化
