@@ -1,0 +1,6 @@
+ini_set("display_errors", "On");
+error_reporting(1);
+显示全部错误
+
+ini_set("display_errors", 0);
+关闭错误显示
