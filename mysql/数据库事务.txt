@@ -1,0 +1,7 @@
+begin;
+
+if(true){
+ commit;
+}else{
+ rollback;
+}
