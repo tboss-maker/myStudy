@@ -1,0 +1,6 @@
+传值可以使用model,map和modelMap传值,本质上没什么区别
+model.attribute('key','value');
+map.put('key','value');
+
+modelMap.attribute('key','value');
+modelMap.put('key','value');
