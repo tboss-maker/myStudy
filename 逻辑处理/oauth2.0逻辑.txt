@@ -1,0 +1,8 @@
+oauth登录流程:
+主站引导进入第三方登陆页面,在第三方登陆成功后,会携带一个code(有效时间很短)返回
+主站,主站根据code去请求第三方然后获取一个access_token(过期时间不同),主站保存用户的
+access_token,以后主站就根据这个access_token去访问一些第三方的api,这个access_token
+就是第三方的凭证
+
+有些系统(例如微信)除了请求道access_token,还会获取refresh_token,
+因为access_token有过期时间,过期之后需要使用refresh_token(这玩意有效期一般很长)
