@@ -1,0 +1,12 @@
+apc和xdebug一样是php的opcode缓存框架
+
+首先下载对应的php_apc.dll版本,然后加入ext目录
+
+在php.ini中支持apc扩展模块
+
+extension=php_apc.dll
+apc.rfc1867 = on
+apc.max_file_size = 100M
+upload_max_filesize = 100M
+post_max_size = 100M
+//以上参数可自己定义

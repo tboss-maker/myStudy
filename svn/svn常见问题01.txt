@@ -1,0 +1,6 @@
+1.清除已有权限
+setting->Saved Data->Authentication data->clear
+这样就可以切换别的账号操作svn了
+
+2.文件被覆盖怎么办
+找到对应文件,show log->Revert to this revision回滚回正确版本重新提交

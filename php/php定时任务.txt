@@ -1,0 +1,7 @@
+header("Content-type:text/html;charset=utf-8");
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+//设置脚本运行时间
+set_time_limit(7200);
+//设置一个php脚本所能够申请大哦的最大内存(防止写的不好的脚本消耗太多内存)
+ini_set('memory_limit','128M');

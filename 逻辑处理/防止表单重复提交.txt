@@ -1,0 +1,7 @@
+利用session防止表单重复提交
+
+在该用户session域下建立一个token(令牌)session['token'],
+在进入表单的时候将token传入form,
+使用隐藏域提交token,如果和服务端token不一样则说明为重复提交
+重复则不处理表单,不重复则处理表单信息
+*清除服务端token

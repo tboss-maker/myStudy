@@ -1,0 +1,6 @@
+“Fatal Error： Allowed memory size of xxxxxx bytes exhausted”
+这个问题在于php消耗了大于系统规定的内存规定
+可以使用
+ini_set('memory_limit','128M')
+或者在php.ini文件中添加
+memory_limit=128M来解决

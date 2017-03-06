@@ -1,4 +1,9 @@
-﻿1. 查看当做操作目录位置
+﻿修改密码
+root权限下
+passwd username
+
+
+1. 查看当做操作目录位置
     > pwd
 
 uname -r -m	//查看内核多少位

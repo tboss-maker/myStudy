@@ -1,0 +1,10 @@
+在安装目录redis.conf文件中(或者redis-windows.conf)
+
+设置访问密码
+requirepass foobared(具体密码)
+
+设置主从
+设置本机为从机时
+slaveof<masterip><masterport>
+当master服务设置了密码保护时，slav服务连接master的密码
+masterauth <master-password>

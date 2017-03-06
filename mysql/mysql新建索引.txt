@@ -1,0 +1,10 @@
+//创建索引
+alter table tablename add (unique|fulltext|spatial) index index_name(field_name[(长度)]);
+
+//创建联合索引
+alter table table_name add index_name(field_name1,field_name2);
+//创建多个索引
+alter table table_name add index_name1(field_name1),add index_name2(field_name2);
+
+//删除索引
+drop index index_name on table_name

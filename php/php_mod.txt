@@ -1,0 +1,7 @@
+加载php5_module,apache的默认方式
+
+将php作为apache的一个子模块运行,当通过web
+访问php文件时,Apache就会调用php5_module解析php代码
+
+配置加载mod_php模块后,php便成为Apache进程本身的一部分,
+每个新的Apache子进程都会加载此模块(每个请求都会运行,有点浪费资源)

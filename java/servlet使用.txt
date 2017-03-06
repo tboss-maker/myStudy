@@ -1,0 +1,7 @@
+intellij使用servlet
+
+1.需要配置tomcat容器
+
+2.需要载入tomcat/lib下servlet jar包
+
+3.web.xml中配置 servlet和servlet-mapping url-pattern配置url

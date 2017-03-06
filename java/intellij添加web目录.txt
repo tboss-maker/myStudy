@@ -1,0 +1,2 @@
+project structure -> facets -> web
+web resource directoriesÖĞÌí¼Ó

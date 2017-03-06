@@ -1,0 +1,2 @@
+jsp url¾ø¶ÔÂ·¾¶
+${pageContext.request.contextPath}

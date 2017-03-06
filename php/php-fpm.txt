@@ -1,0 +1,12 @@
+php-fpm:
+实现了Fastcgi的程序。
+php-cgi是CGI的php实现
+php-fpm是Fastcgi的php实现
+
+PS:CGI和Fastcgi都只是一种协议(或者解决方案),
+可以用任何语言来实现
+
+小问题:
+如果修改了php.ini的话,php-cgi进程就没办法平滑重启.
+php-fpm对此的处理机制是新的worker用薪的配置
+已经存在的worker处理完手上的活就可以歇着了,通过这种机制来平滑过渡
