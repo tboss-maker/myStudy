@@ -1,0 +1,2 @@
+db.addUser()失败原因:
+3.2之后不支持,使用createUser创建用户

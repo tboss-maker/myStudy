@@ -1,0 +1,5 @@
+参数启动
+mongod.exe --dbpath C:\mongod\db
+
+配置文件启动
+mongod.exe --config C:\mongod\mongodb.conf

@@ -1,0 +1,4 @@
+session原理:
+
+服务器端为每一个用户根据算法算出唯一的sessionid,并以此来存储用户
+信息.UID并会存储在cookie中,通过url传导

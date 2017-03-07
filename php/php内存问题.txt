@@ -4,3 +4,9 @@
 ini_set('memory_limit','128M')
 或者在php.ini文件中添加
 memory_limit=128M来解决
+
+//作用:获取目前php脚本所用的内存大小
+memory_get_usage();
+//返回当前脚本到目前位置所占用的内存峰值,这样就可能获取到
+目前脚本的内存需求情况
+memory_get_peak_usage();

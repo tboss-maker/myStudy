@@ -1,0 +1,2 @@
+//在分组的基础上再统计
+select coalesce(tname,'总数'),sum(tmoney) as total from test group by tname with rollup;
