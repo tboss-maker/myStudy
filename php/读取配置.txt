@@ -1,0 +1,12 @@
+
+function get_config($key){
+include_once './config'
+if($$key){
+ return $$key;
+}
+
+}
+
+
+configÎÄ¼þ:
+$key = array('name'=>'tom','age'=>24,'money'=>500);

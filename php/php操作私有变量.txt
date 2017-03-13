@@ -1,0 +1,7 @@
+php和java区别
+1.java操作私有变量需要使用set/get
+
+2.php除了使用set/get操作私有变量外,还有魔术方法
+__set($name,$value){
+};
+__get($name)

@@ -1,0 +1,8 @@
+alter table操作:
+会涉及到lock --- copy to new table --- rename --- unlock的过程
+大表的锁表时间会很长,所以在大表进行表结构修改时,不适用alter操作
+
+数据库5.1以后版本以下情况不会触发copy to new table锁表时间短
+1.alter table tbl_name rename to new_tbl_name
+2.重命名索引
+3.添加删除索引 （仅 innodb plugin支持）
