@@ -1,0 +1,2 @@
+phpstorm支持phalcon语法:
+默认phpstorm不显示phalcon,需要下载phptool然后externl扩展
