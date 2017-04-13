@@ -29,3 +29,6 @@ ping IP
  
 永久关闭后启用:
 [root@localhost ~]# chkconfig   iptables on<回车>
+
+安装
+yum install vsftpd
