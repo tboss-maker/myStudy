@@ -1,0 +1,6 @@
+问题:两张表字符集不一致使用连表,导致索引失效
+
+解决方案:将字符集统一,否则索引无效
+
+修改字符集 alter table t1 charset utf8mb4;(只是修改了表的默认字符集,即新字段才会使用utf8mb4,已存在的字段依然为老字符集)所以这是错误的
+正确: alter table t1 convert to charset utf8mb4,lock=none
