@@ -1,0 +1,3 @@
+使用root权限去改写vsftpd.conf文件
+
+write_enable=YES
