@@ -1,0 +1,11 @@
+1. ps aux | grep -i mysql
+查询出mysqld.sock
+
+2. sudo  find / -name php.ini
+查询出php.ini位置
+
+3.
+pdo_mysql.default_socket;
+mysql.default_socket;
+mysqli.default_socket;
+然后修改其中的的三个default_socket的值,使其等于mysqld.sock 的路径
