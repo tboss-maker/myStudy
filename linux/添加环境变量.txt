@@ -1,0 +1,6 @@
+以mysql添加环境变量为例
+1.修改/etc/profile文件使其永久性生效，并对所有系统用户生效，在文件末尾加上如下两行代码
+
+PATH=$PATH:/usr/local/webserver/php/bin:/usr/local/webserver/mysql/bin
+export PATH
+2.执行 命令source /etc/profile或 执行点命令 ./profile使其修改生效，执行完可通过echo $PATH命令查看是否添加成功。
