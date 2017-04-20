@@ -1,0 +1,2 @@
+ubuntu°²×°
+sudo apt-get install lrzsz
