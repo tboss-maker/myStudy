@@ -1,0 +1,3 @@
+PATH=$PATH:/usr/local/webserver/php/bin:/usr/local/webserver/mysql/bin
+export PATH
+最后：执行 命令source /etc/profile或 执行点命令 ./profile使其修改生效，执行完可通过echo $PATH命令查看是否添加成功。

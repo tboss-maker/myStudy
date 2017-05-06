@@ -1,0 +1,8 @@
+连接不上很多原因是没有安装ssh
+sudo apt-get install openssh-server openssh-client
+
+安装ftp
+sudo apt-get install vsftpd
+
+安装vim
+sudo apt-get install vim-gtk

@@ -1,0 +1,4 @@
+var_export和var_dump区别
+
+var_export对resource类数据显示为null,
+var_export需要符合php数据规范,可以直接当作变量使用
