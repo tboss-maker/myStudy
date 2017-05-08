@@ -1,0 +1,9 @@
+1.printf函数的一般使用形式为：printf("输出格式"，输出项系列)；要输出字符串，则只需写出相应的输出格式以及输出项系列即可,其中输出格式为%s,输出项系列为字符串名
+2.printf函数输出字符串的例子如下：
+#include<stdio.h>
+void main()
+{
+  char str[10]="ABCD";
+printf("%s",str);
+}
+上述程序输出了字符串 ABCD
