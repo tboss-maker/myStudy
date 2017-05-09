@@ -1,0 +1,9 @@
+1.版本回滚
+ git log查看版本hash
+
+ git reset --hard hash值
+
+ #git push -f origin master
+
+2.单文件回滚
+ git checkout -- src/main/filter/dev-filter.properties  
