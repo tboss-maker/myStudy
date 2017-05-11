@@ -1,0 +1,5 @@
+1.使用git下载https://github.com/magento/magento2
+
+2.php开启php_openssl,php_intl等扩展
+
+3.将comporser文件复制到根项目下,php composer.phar install

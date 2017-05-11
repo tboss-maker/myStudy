@@ -1,0 +1,5 @@
+1.查看模式
+php bin/magento deploy:mode:show
+
+2.一般切换product模式会快一点
+php bin/magento deploy:mode:set production

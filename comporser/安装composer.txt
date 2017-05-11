@@ -1,0 +1,2 @@
+使用中国镜像
+https://pkg.phpcomposer.com/

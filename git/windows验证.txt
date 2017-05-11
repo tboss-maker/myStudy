@@ -1,0 +1,14 @@
+1.右键鼠标，选中 "Git Bash here"
+
+2.cd ~/.ssh (没有就创建mkdir)
+
+3.配置全局的name和email，这里是的你github或者bitbucket的name和email
+git config --global user.name "zhaosuji"  
+git config --global user.email "1156439168@qq.com"
+
+4.生成key
+ssh-keygen -t rsa -C "1156439168@qq.com" 
+
+连续按三次回车，这里设置的密码就为空了，并且创建了key。
+
+5.id_rsa.pub就是需要的key
