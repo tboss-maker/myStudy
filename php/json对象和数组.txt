@@ -1,0 +1,7 @@
+php数组转换json对象
+
+//json对象
+$jsonObj = json_encode((object)$arr);
+
+//json数组
+$jsonArr = json_encode($arr);
