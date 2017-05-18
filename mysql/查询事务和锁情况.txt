@@ -1,0 +1,38 @@
+SELECT
+    trx_id AS  `事务ID`,
+    trx_state AS `事务状态`,
+    trx_requested_lock_id  AS  `事务需要等待的资源`,
+    trx_wait_started    AS  `事务开始等待时间`,
+    trx_tables_in_use AS `事务使用表`,
+    trx_tables_locked AS `事务拥有锁`,
+    trx_rows_locked  AS `事务锁定行`,
+    trx_rows_modified  AS `事务更改行`
+FROM
+    information_schema.innodb_trx ;
+SELECT
+    lock_id         AS  `锁ID`,
+    lock_trx_id    AS  `拥有锁的事务ID`,
+    lock_mode      AS  `锁模式    `,
+    lock_type      AS  `锁类型`,
+    lock_table         AS  `被锁的表`,
+    lock_index         AS  `被锁的索引`,
+    lock_space         AS  `被锁的表空间号`,
+    lock_page      AS  `被锁的页号`,
+    lock_rec       AS  `被锁的记录号`,
+    lock_data      AS  `被锁的数据`
+FROM
+    information_schema.innodb_locks;
+
+1、查询是否锁表
+show OPEN TABLES where In_use > 0;
+ 
+2、查询进程
+    show processlist
+  查询到相对应的进程===然后 kill    id
+ 
+补充：
+查看正在锁的事务
+SELECT * FROM INFORMATION_SCHEMA.INNODB_LOCKS; 
+ 
+查看等待锁的事务
+SELECT * FROM INFORMATION_SCHEMA.INNODB_LOCK_WAITS; 
