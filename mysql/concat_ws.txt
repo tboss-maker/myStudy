@@ -1,0 +1,3 @@
+concat特殊形式
+concat_ws不会忽略null(concat中存在null值则值最终为null)
+CONCAT_WS('/',b.name,m.name,s.name)第一个参数为分隔符
