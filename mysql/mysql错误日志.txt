@@ -1,0 +1,2 @@
+如果是windows下，一般是安装目录下的data目录下 扩展名是.err那个文件，你可以打开安装目录下的my.ini文件检查一下
+如果是linux下，一般是/var/log/mysqld.log ,cat /etc/my.cnf

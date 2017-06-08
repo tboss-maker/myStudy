@@ -1,0 +1,5 @@
+show OPEN TABLES where In_use > 0;
+
+show processlist;
+
+kill id É±ËÀ½ø³ÌºÅ
