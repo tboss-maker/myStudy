@@ -1,0 +1,32 @@
+MySQL 的大表运维总是令人头疼的一件事，特别是大表表结构的修改尤为困难。
+
+首先，alter table 的process不可被kill ， 一旦执行就不可回退。
+
+其次，大多数的alter table操作都会涉及 lock --- copy to new table --- rename --- unlock的过程，锁表时间会很长。
+
+本文不是讨论如何进行大表表结构变更， 而是汇总一些不涉及copy to new table这一步的alter table情况。
+
+这些情况下，mysql会直接修改frm文件，而lock的时间也仅是秒级的。
+
+
+MySQL 5.0 系列  （即5.0.x 版本）
+如果你是这个版本，很遗憾所有alter table 操作都会进行temp table copy。
+
+MySQL 5.1 系列  （即5.1.x 版本）
+以下操作不会有copy temp table操作，即锁表时间较短。
+
+1. ALTER TABLE tbl_name RENAME TO new_tbl_name
+
+2. 不涉及数据修改的操作
+
+2.1 列改名 （除了innodb）
+
+2.2 修改默认值 （注意：必须使用 modify ，而不能使用change）
+
+2.3 增加ENUM的枚举定义 （注意：仅当新增枚举在当前允许最大值內，例：1B 可存8个枚举，2B可存128个枚举）
+
+3. 通过add partition 添加分区
+
+4. 重命名索引
+
+5. 添加删除索引 （仅 innodb plugin支持）

@@ -1,0 +1,6 @@
+having只能针对group by使用
+单独使用时mysql会自动加上group by null 
+在使用时没有数据时,去添加相应的group by语句
+
+select count(g.id) as num,g.org_id,g.`status` from goods as g left join goods_brand as b on g.brand_id=b.id left join goods_model as m on g.model_id=m.id left join goods_stripe as s on g.stripe_id=s.id group by g.org_id having g.org_id='1981';
+select count(g.id) as num,g.org_id,g.`status` from goods as g left join goods_brand as b on g.brand_id=b.id left join goods_model as m on g.model_id=m.id left join goods_stripe as s on g.stripe_id=s.id where g.org_id='1981';

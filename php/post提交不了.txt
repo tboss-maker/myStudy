@@ -1,0 +1,4 @@
+$_POST接受不到数据
+
+使用 $post = json_decode(file_get_contents("php://input"),true);
+解析数据

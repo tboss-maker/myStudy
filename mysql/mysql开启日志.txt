@@ -1,0 +1,18 @@
+是否启用了日志 
+mysql>show variables like 'log_%'; 
+
+linux:
+# 在[mysqld] 中輸入  
+#log  
+log-error=/usr/local/mysql/log/error.log  
+log=/usr/local/mysql/log/mysql.log  
+long_query_time=2  
+log-slow-queries= /usr/local/mysql/log/slowquery.log
+
+windows:
+# 在[mysqld] 中輸入  
+#log  
+log_error=E:/PROGRA~1/EASYPH~1.0B1/mysql/logs/error.log  
+log=E:/PROGRA~1/EASYPH~1.0B1/mysql/logs/mysql.log 
+long_query_time=2  
+log_slow_queries= E:/PROGRA~1/EASYPH~1.0B1/mysql/logs/slowquery.log  

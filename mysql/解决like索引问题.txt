@@ -1,0 +1,8 @@
+mysql数据库中记录数达到36万条了,检索速度慢了许多,怀疑是SQL query中
+SELECT * FROM table WHERE title LIKE '%keyword%'的问题。
+第一步：
+在title字段上加索引：create index stock_title on stock(title)；
+测试发现没什么效果,因为索引只对'keyword%'有效,对%开头的（'%keyword'，'%keyword%')起不了作用.mysql中instr()的使用
+第二步：
+改成SELECT * FROM table WHERE instr(title,'keyword')>0 后
+检索速度快了不少,问题解决了
