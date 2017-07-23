@@ -1,0 +1,8 @@
+Innodb I/O相关配置(Innodb是按照事务提交的)
+ INDB事务先写入事务日志再写入磁盘
+ Innodb_log_file_size 事务日志大小
+ Innodb_log_files_in_group 事务日志个数
+ 事务日志总大小 = 
+ Innodb_log_file_size*Innodb_log_files_in_group
+ 
+ Innodb_log_buffer_size 事务日志缓冲区(保持1S时间)

@@ -1,0 +1,6 @@
+linux命令实现:
+
+nohup php test.php &
+
+&设置守护进程
+nohup 设置脱离终端

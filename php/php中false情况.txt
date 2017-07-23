@@ -1,0 +1,8 @@
+1.boolean false
+2.int 0
+3.string "0" "" ('0.0','000',' '都是true,只有一个0为false)
+4.空数组
+5.空对象(php5以上版本为true)
+6.null和未定义变量
+
+

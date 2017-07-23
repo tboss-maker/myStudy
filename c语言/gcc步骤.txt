@@ -1,0 +1,31 @@
+1.预处理 .c->.i (展开头文件,宏替换)
+
+2.编译 .i->.s
+
+3.汇编 .s->.o
+
+4.链接.o->可执行文件
+
+宏定义(不以分号结尾)
+在预处理阶段直接进行字符串的替换,不考虑语法
+#define R 10 
+
+条件编译
+
+后跟表达式
+#if (表达式)
+#else
+#endif
+
+后跟宏
+#ifdef (宏)
+#else
+#endif
+
+typedef定义新类型
+主要用于定义结构体
+typedef struct weapon{
+  char *name;
+  int age;
+  int money
+}weapon;

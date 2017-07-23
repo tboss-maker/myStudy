@@ -1,0 +1,28 @@
+1.声明结构体方法:
+
+struct student{
+ char *name;
+ int age;
+ int money;
+}
+
+struct student s1={"tom",20,500};
+
+//别名
+typedef struct student{
+ char *name;
+ int age;
+ int money;
+}stu;
+
+stu s1 =  {"jim",30,1000};
+
+2.联合体union(其中数据公用一块内存,值覆盖)
+所占内存大小为联合体中占最大值
+union un{
+ char *name;
+ int age;
+ int money;
+}
+
+union un u1;

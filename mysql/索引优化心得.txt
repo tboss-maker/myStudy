@@ -1,0 +1,38 @@
+一.常见SQL实践
+1.负向条件查询不使用索引(由于B tree)
+not in/not exists !=都不触发索引
+
+2.前导模糊查询不能使用索引
+like '%XX'不触发索引
+
+3.数据区分度不大的字段不宜使用索引
+例如 sex字段,每次过滤掉的数据很少,不宜使用索引
+
+4.在属性上进行计算不能命中索引
+select * from order where YEAR(date) < = '2017'
+即使date上建立了索引，也会全表扫描，可优化为值计算：
+select * from order where date < = CURDATE()
+或者：
+select * from order where date < = '2017-01-01'
+
+二.非常见sql实践
+5.如果业务大部分为单条查询,使用hash索引性能更好
+B-tree索引时间复杂度O(log(n))
+hash时间复杂度为O(1)
+
+6.字段设置默认值或者not null,索引不存储null值
+
+7.复合索引最左前缀(顺序不限)
+
+8.enum保存的是tinyint,字符串无法保存,索引在PHP中,不要使用enum,直接使用tinyint
+
+9.如果明确知道只有一条结果返回,limit 1 能够提高效率,会在获取一条记录的时候停止继续查询
+
+10.把计算放在业务层而不是数据库层,除了节省数据的CPU,还有意想不到的查询缓存优化效果
+原因：
+释放了数据库的CPU
+多次调用，传入的SQL相同，才可以利用查询缓存
+
+11.类型转换会导致全表扫描
+select * from user where phone=13800001234
+不会命中索引

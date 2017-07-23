@@ -1,0 +1,11 @@
+mysql是单进程,多线程工作模式
+内存配置相关参数:
+确定可以使用的内存上线(不可以大于服务器内存)
+确定mysql的每个连接使用的内存(每个线程的设置)
+  sort_buffer_size 排序缓冲区尺寸
+  join_buffer_size 连接缓冲区
+  #read_buffer_size myisam查询缓存区大小(4K倍数)
+  read_rnd_buffer_size 
+
+  缓存池分配内存(数据和索引全部都在这里)
+	Innodb_buffer_pool_size(总内存-(每个线程所需要的内存*连接数)-系统预留内存)(简单来说服务器内存百分之75)

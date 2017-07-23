@@ -1,0 +1,6 @@
+1. system>const(pk,unique index)
+>eq_ref(索引,关联匹配若干行)>
+>ref
+>range(当使用=、<>、>、>=、<、<=、IS NULL、<=>、BETWEEN或者IN操作符，用常量比较关键字列时，可以使用range)
+>index(该联接类型与ALL相同，除了只有索引树被扫描。这通常比ALL快，因为索引文件通常比数据文件小)
+>ALL

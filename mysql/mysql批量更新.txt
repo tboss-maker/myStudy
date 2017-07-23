@@ -1,0 +1,25 @@
+1.更新一个值
+
+UPDATE mytable
+    SET myfield = CASE id
+        WHEN 1 THEN 'value'
+        WHEN 2 THEN 'value'
+        WHEN 3 THEN 'value'
+    END
+WHERE id IN (1,2,3)
+
+
+2.更新多个值
+UPDATE categories
+    SET display_order = CASE id
+        WHEN 1 THEN 3
+        WHEN 2 THEN 4
+        WHEN 3 THEN 5
+    END,
+    title = CASE id
+        WHEN 1 THEN 'New Title 1'
+        WHEN 2 THEN 'New Title 2'
+        WHEN 3 THEN 'New Title 3'
+    END
+WHERE id IN (1,2,3)
+
