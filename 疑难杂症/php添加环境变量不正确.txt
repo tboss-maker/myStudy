@@ -1,0 +1,10 @@
+添加环境变量的时候只添加PHP路径不正确
+
+需要查看有没有
+%SystemRoot%\system32
+
+%SystemRoot%
+
+%SystemRoot%\System32\Wbem
+
+如果没有就添加上再添加PHP路径就可以了(如果是一行就加;是win10的环境变量就不加)
