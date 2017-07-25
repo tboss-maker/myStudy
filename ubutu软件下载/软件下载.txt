@@ -1,0 +1,15 @@
+更新源
+sudo apt-get update
+
+安装ssh
+打开"终端窗口"，输入"sudo apt-get install openssh-server"-->回车-->输入"y"-->回车-->安装完成。
+
+
+安装vsftpd
+打开"终端窗口"，输入"sudo apt-get install vsftpd"-->回车-->安装完成。
+
+判断vsftpd是否安装成功
+打开"终端窗口"，输入"sudo service vsftpd restart"重启vsftpd服务-->回车-->vsftpd处于运行状态，说明安装成功。
+
+下载rzsz
+sudo apt-get install lrzsz
