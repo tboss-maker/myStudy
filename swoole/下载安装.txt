@@ -1,0 +1,9 @@
+下载下源码包
+
+git clone https://github.com/swoole/swoole-src/releases
+
+cd swoole
+phpize
+./configure
+make 
+sudo make install
