@@ -1,0 +1,25 @@
+//服务器
+$address = '127.0.0.1';
+$port = 9501;
+
+$sock = socket_create(AF_INET,SOCK_STREAM,SOL_TCP);
+socket_bind($sock,$address,$port);
+//监听()第二个参数表示连接队列长度
+socket_listen($sock,5);
+//获取客户端连接
+$client = socket_accept($sock);
+$msg = 'server res';
+//发送消息给客户端
+socket_write($client,$msg,8192);
+$req = socket_read($client,8192);
+echo $req;
+
+
+
+//客户端
+$socket = socket_create(AF_INET,SOCK_STREAM,SOL_TCP);
+socket_connect($socket,'127.0.0.1',9501);
+$req = 'request';
+socket_write($sock,$req,8192);
+$res = socket_read($socket,8192);
+echo $res;

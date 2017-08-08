@@ -2,4 +2,7 @@ show OPEN TABLES where In_use > 0;
 
 show processlist;
 
-kill id 杀死进程号
+//根据条件筛选进程
+select * from [mysql|information_schema].processlist where command !='sleep';
+
+kill id 杀死进程号;
