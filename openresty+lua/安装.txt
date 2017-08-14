@@ -1,0 +1,3 @@
+https://openresty.org/cn/download.html
+
+下载 解压 编译安装
