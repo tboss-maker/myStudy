@@ -1,0 +1,9 @@
+ЦєЖЏ 
+./nginx
+
+ЙиБе 
+nginx -s stop 
+
+жидиУќСю 	
+nginx -s reload
+
