@@ -23,7 +23,6 @@
     }
     那么10次一般只会有1次会访问到8081，而有9次会访问到8080
     
-    
     ip_hash:
         upstream test {
         ip_hash;

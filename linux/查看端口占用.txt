@@ -1,6 +1,7 @@
 1.使用lsof 
-lsof -i:80端口号查看某个端口是否被占用 
+lsof -i:端口号
+查看某个端口是否被占用 
 
 2.使用netstat 
-使用netstat -anp|grep 80 
+netstat -tunlp|grep 端口号 
 

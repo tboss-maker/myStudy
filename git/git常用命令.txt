@@ -27,3 +27,19 @@ git push origin test
 获取
 git pull <remote> branch
 例如:git pull orgin dev
+
+切换分支
+git checkout branchname
+
+查看状态
+git status
+
+查看修改
+git diff
+
+查看日志
+git log 1
+
+提交
+git add . ;
+git commit -m '注释';
