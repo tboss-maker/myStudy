@@ -1,0 +1,1 @@
+swoole内置http服务器对于http协议的封装不够完善,所以最好使用nginx作反向代理
