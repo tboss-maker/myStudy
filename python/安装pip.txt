@@ -1,0 +1,2 @@
+进入python/Script文件夹 运行easy_inatall pip
+以上则成功安装

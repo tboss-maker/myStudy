@@ -1,0 +1,6 @@
+1.sudo apt-get install redis-server
+
+2.ps -aux|grep redis  netstat -nlt|grep 6379
+
+3.redis-cli
+

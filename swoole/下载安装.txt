@@ -1,6 +1,6 @@
 下载下源码包
 
-git clone https://github.com/swoole/swoole-src/releases
+git clone http://git.oschina.net/swoole/swoole
 
 cd swoole
 phpize

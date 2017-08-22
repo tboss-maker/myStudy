@@ -1,0 +1,16 @@
+修改php.ini
+
+[xhprof]
+extension=xhprof.so
+xhprof.output_dir=/tmp
+
+xhprof_enable()函数用于开始XHProf性能分析，区别在于前者功能更加强大，而后者则是是以简单模式启动性能分析（简单记录了函数的调用栈信息），开销比较小。
+
+xhprof_disable()函数用于停止性能分析，并返回分析的数据。
+
+flags 该参数用于为剖析结果添加额外的信息，该参数的值使用以下宏，如果需要提供多个值，使用|进行分隔。
+XHPROFFLAGSNO_BUILTINS 跳过所有的内置函数
+XHPROFFLAGSCPU 添加对CPU使用的分析
+XHPROFFLAGSMEMORY 添加对内存使用的分析
+
+var_dump(xhprof_disable());
