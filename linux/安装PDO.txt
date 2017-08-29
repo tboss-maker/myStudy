@@ -1,0 +1,33 @@
+　　ubuntu下安装好LAMP后默认情况没有安装mysql_pdo扩展，以下是安装步聚
+
+　　1 安装pdo
+
+　　sudo pecl install pdo
+
+　　出现以下错误是说明pdo已经加入了php的默认安装，不需要再安装了
+
+　　[Some stuff excluded for brevity]make: *** [pdo_dbh.lo] Error 1 ERROR: `make' failed
+
+　　2 安装pdo_mysql
+
+　　sudo pecl install pdo_mysql
+
+　　以下错误表示在pear中找不到pdo_mysql 驱动，那重新安装php5-mysql看看
+
+　　Some stuff excluded for brevity]checking for PDO includes... checking for PDO includes...
+
+　　configure: error: Cannot find php_pdo_driver.h.ERROR: `/tmp/pear/temp/PDO_MYSQL/configure' failed
+
+　　3 重新安装php5-mysql
+
+　　sudo apt-get install php5-mysql
+
+　　4 配置php.ini文件（自行查看编辑文件命令）
+
+　　sudo vi/etc/php5/apache2/php.ini
+
+　　在最后面加上
+
+　　extension = pdo.so
+
+　　extension = pdo_mysql.so

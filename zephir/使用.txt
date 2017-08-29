@@ -1,0 +1,14 @@
+ git clone https://github.com/phalcon/zephir
+ cd zephir
+ ./install-json
+ ./install -c
+
+zephir init utils
+
+cd utils/utils
+
+cd ..
+
+zephir build 
+
+extension=utils.so

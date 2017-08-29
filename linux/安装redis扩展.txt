@@ -1,0 +1,16 @@
+下载phpredis
+https://github.com/nicolasff/phpredis/
+ 
+tar -zxvf phpredis.tar.gz
+cd  phpreids
+phpize
+./configure  -with-php-config=/usr/bin/php-config
+ 
+make  
+sudo make install
+完成之后会提示
+Installing  share  extensions：   /usr/lib/php5/20100525+lfs/
+ 
+修改php.ini添加（看了很多都没讲下面的扩展路径地址怎么来的，搞的配置当天极度失落怀疑人品智商。其实这个路径是上面make install 之后会提示的）
+extension=/usr/lib/php5/20100525+lfs/redis.so
+extension=redis.so

@@ -1,0 +1,1 @@
+在类中使用swoole_process时,process的回调函数必须是public的,否则无法调用new swoole_process(array($this,'callback'));

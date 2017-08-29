@@ -44,3 +44,5 @@ GRANT privileges ON databasename.tablename TO 'username'@'host' WITH GRANT OPTIO
 5.É¾³ıÓÃ»§ 
 
 ÃüÁî: DROP USER 'username'@'host'; 
+
+FLUSH PRIVILEGES;

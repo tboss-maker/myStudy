@@ -1,0 +1,30 @@
+方法/步骤
+解压MySQL压缩包到硬盘位置，如：C:\MySQL
+配置环境变量：
+将“C:\MySQL;”加入到环境变量Path中
+重命名my-default.ini为my.ini
+修改my.ini内容：
+basedir =C:\MySQL
+datadir =D:\MySQL_Data
+port =3306
+server_id =10
+说明：
+basedir是程序存放目录
+datadir是数据库文件存放目录
+port端口号，默认为3306
+启动CMD，将工作目录调置到C:\MySQL\bin
+安装MySQL为服务，并指定配置文件位置
+mysqld -install MySQL --defaults-file="C:\MySQL\my.ini"
+对于5.7.12版本来说，如果此时执行net start mysql命令启动服务，则会自动初始化，有可能配置成功，但大多数情况下可能会出现服务无法启动，没关系，使初始化命令进行初始化。
+初使化之前请清空D:\MySQL_Data内的文件，执行初使化命令：
+mysqld --initialize --user=mysql --console
+执行完后CMD控制台上会显示一大堆英文，没关系，大至是说配置文件中缺少一些参数。后期修改my.ini。
+启动服务：
+net start mysql
+服务成功启动。
+其它一些可能会用到的命令：
+net stop mysql//停止名为mysql的服务
+mysqld remove mysql//删除名为mysql的服务
+
+出现root权限问题添加
+skip-grant-tables

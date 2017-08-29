@@ -1,3 +1,6 @@
+创建分支(不能重名)
+git branch branchName
+
 本地分支改名
 Git branch -m oldbranchname newbranchname
 

@@ -1,0 +1,4 @@
+在装有MySQL的机器上登录MySQL mysql -u root -p密码
+执行use mysql;
+执行update user set host = '%' where user = 'root';这一句执行完可能会报错，不用管它。
+执行FLUSH PRIVILEGES;
