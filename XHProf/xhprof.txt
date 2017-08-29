@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+linux °²×°
+
+wget http://pecl.php.net/get/xhprof-0.9.2.tgz  
+tar zxf xhprof-0.9.2.tgz  
+cd xhprof-0.9.2  
+cp -r xhprof_html xhprof_lib /ÄãµÄwebÄ¿Â¼Â·¾¶/xhprof/  £¨´Ë´¦Ä¿µÄÊÇ½¨Á¢Êý¾Ý·ÖÎöÄ¿Â¼£¬¿É½«´ËÄ¿Â¼ÅäÖÃ³ÉÐéÄâÖ÷»ú·ÃÎÊ£©  
+cd extension/  
+/usr/local/webserver/php/bin/phpize  
+./configure  ¨Cwith-php-config=/usr/local/webserver/php/bin/php-config   (php-configµÄÂ·¾¶)  
+make && make install 
+
+
+extension=xhprof.so
+xhprof.output_dir=/www/logs/xhprof
+
+
+windows Õý³£phpÀ©Õ¹°²×°
+
+
+xhprof_enable/xhprof_sample_enableº¯ÊýÓÃÓÚ¿ªÊ¼XHProfÐÔÄÜ·ÖÎö£¬Çø±ðÔÚÓÚÇ°Õß¹¦ÄÜ¸ü¼ÓÇ¿´ó£¬¶øºóÕßÔòÊÇÊÇÒÔ¼òµ¥Ä£Ê½Æô¶¯ÐÔÄÜ·ÖÎö£¨¼òµ¥¼ÇÂ¼ÁËº¯ÊýµÄµ÷ÓÃÕ»ÐÅÏ¢£©£¬¿ªÏú±È½ÏÐ¡¡£
+
+xhprof_disable/xhprof_sample_disableº¯ÊýÓÃÓÚÍ£Ö¹ÐÔÄÜ·ÖÎö£¬²¢·µ»Ø·ÖÎöµÄÊý¾Ý¡£
+
+xhprof_enable(XHPROFFLAGSCPU | XHPROFFLAGSCPU | XHPROFFLAGSMEMORY)
+=======
 ÐÞ¸Äphp.ini
 
 [xhprof]
@@ -9,8 +35,19 @@ xhprof_enable()º¯ÊýÓÃÓÚ¿ªÊ¼XHProfÐÔÄÜ·ÖÎö£¬Çø±ðÔÚÓÚÇ°Õß¹¦ÄÜ¸ü¼ÓÇ¿´ó£¬¶øºóÕßÔòÊÇÊ
 xhprof_disable()º¯ÊýÓÃÓÚÍ£Ö¹ÐÔÄÜ·ÖÎö£¬²¢·µ»Ø·ÖÎöµÄÊý¾Ý¡£
 
 flags ¸Ã²ÎÊýÓÃÓÚÎªÆÊÎö½á¹ûÌí¼Ó¶îÍâµÄÐÅÏ¢£¬¸Ã²ÎÊýµÄÖµÊ¹ÓÃÒÔÏÂºê£¬Èç¹ûÐèÒªÌá¹©¶à¸öÖµ£¬Ê¹ÓÃ|½øÐÐ·Ö¸ô¡£
+>>>>>>> d60168f8f10dac8bb7c8e02a1db9b7f9915fbfdf
 XHPROFFLAGSNO_BUILTINS Ìø¹ýËùÓÐµÄÄÚÖÃº¯Êý
 XHPROFFLAGSCPU Ìí¼Ó¶ÔCPUÊ¹ÓÃµÄ·ÖÎö
 XHPROFFLAGSMEMORY Ìí¼Ó¶ÔÄÚ´æÊ¹ÓÃµÄ·ÖÎö
 
+<<<<<<< HEAD
 var_dump(xhprof_disable());
+
+ct º¯Êýµ÷ÓÃ´ÎÊý£¬
+wt »¨·ÑµÄÊ±¼ä£¬
+cpu »¨·ÑµÄ CPU Ê±¼ä(Î¢Ãë¼´°ÙÍò·ÖÖ®Ò»Ãë)£¬
+mu Ê¹ÓÃµÄÄÚ´æ(bytes)£¬
+pmu Ê¹ÓÃµÄÄÚ´æ·åÖµ(bytes)¡£
+=======
+var_dump(xhprof_disable());
+>>>>>>> d60168f8f10dac8bb7c8e02a1db9b7f9915fbfdf
