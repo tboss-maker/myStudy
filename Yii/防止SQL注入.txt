@@ -1,0 +1,7 @@
+
+$sql     = "SELECT * FROM   tab WHERE id = :id";
+$db      = \Yii::$app->db;
+$command = $db->createCommand($sql, [':id'=>$id]);//方法内部对第二个参数进行PDO参数化，不会导致注入漏洞
+$result  = $command->queryAll();
+var_dump($result);
+[':id' => $id] 是数组的简写(php5.4+支持，Yii2也需要php5.4+才支持)，等同于array(':id' => $id)

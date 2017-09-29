@@ -1,0 +1,4 @@
+控制器必须只有大驼峰中间单词都必须要写
+
+PicconfirmController正确
+PicConfirmController错误

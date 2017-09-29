@@ -1,0 +1,5 @@
+//查询值为null
+select * from table where column is NULL;
+
+//查询值不为Null
+select * from table where column is not Null

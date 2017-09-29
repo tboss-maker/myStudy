@@ -1,0 +1,3 @@
+$model=Income::find()->leftJoin('room', 'room.id = income.room_id')->select('income.*,room.title')->asArray()->one();
+
+asArray显示连表属性并且可以直接过滤出数组数据

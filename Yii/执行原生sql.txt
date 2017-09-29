@@ -1,0 +1,4 @@
+$connection  = Yii::$app->db;
+$sql     = "select * from hd_article where aid<".$aid." order by aid desc limit 1";
+$command = $connection->createCommand($sql);
+$res     = $command->queryAll($sql);

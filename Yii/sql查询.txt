@@ -1,0 +1,10 @@
+//²éÑ¯È«²¿
+
+M::find()->select(['add_quota','merchant_level'])->all();
+M::find()->select(['add_quota','merchant_level'])->one();
+
+//findAll
+$users = modelName::model()->findAll(array(
+  'select' =>array('username','id','email'),
+  'order' => 'id DESC', 
+));

@@ -1,0 +1,5 @@
+函数是否存在
+function_exists(function_name);
+
+判断方法是否存在
+method_exists($obj,$method_name) method_exists($this,$method_name)

@@ -1,0 +1,7 @@
+1.使用foreach和in_array实现
+foreach($arr as $v1){
+	if(){
+	}
+}
+
+2.使用array_diff()实现

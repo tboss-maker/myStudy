@@ -1,0 +1,1 @@
+$commandQuery->createCommand()->getRawSql();  
