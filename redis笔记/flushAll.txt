@@ -8,3 +8,9 @@ flushAll命令会清除所有redis服务器中的数据(所有数据库)
 1.切换到目标数据库 select db
 2.执行 flushDB命令
 只清除当前库数据不影响别库
+
+$redis = new Redis();
+$redis->pconnect('192.168.15.248','6381');
+$redis->auth('78dk.com');
+$redis->select(1);
+$redis->flushDB();

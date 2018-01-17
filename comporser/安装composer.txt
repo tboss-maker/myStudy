@@ -1,2 +1,8 @@
 使用中国镜像
 https://pkg.phpcomposer.com/
+
+使用局部composer
+
+下载composer.phar 并放入对应项目
+
+php composer.phar 配置

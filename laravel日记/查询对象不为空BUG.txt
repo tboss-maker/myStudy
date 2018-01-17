@@ -1,0 +1,12 @@
+在使用 Laravel Eloquent 模型时，我们要判断取出的结果集是否为空，但我们发现直接使用 is_null 或 empty是无法判段它结果集是否为空的！！！
+
+只能使用自带api
+if ($users->first()) {
+    //
+ } 
+if (!$users->isEmpty()) {
+    //
+ } 
+if ($users->count()) {
+    //
+ }

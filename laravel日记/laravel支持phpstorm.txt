@@ -1,0 +1,15 @@
+1.composer.jsonÌí¼Ó
+
+{
+"require": {
+"laravel/framework": "4.1.*",
+"barryvdh/laravel-ide-helper": "dev-master"
+}
+}
+
+2.composer update
+
+3.config/app.phpÏÂprovidersÌí¼Ó
+Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
+4.php artisan ide-helper:generate

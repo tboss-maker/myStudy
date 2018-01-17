@@ -1,0 +1,30 @@
+laravel的路由定义中，其中route:resoure()，可以直接定义类似restful风格的URL
+
+//get.admin/category  全部分类列表
+public function index(){
+
+}
+//post.admin/category   提交创建的数据
+public function store(){
+
+}
+//添加get.admin/category/create
+public function create(){
+
+}
+//get.admin/category/{category}  显示单个分类信息
+public function show(){
+
+}
+//delete.admin/category/{category}   删除单个分类
+public function destory(){
+
+}
+//get.admin/category/{category}/edit  编辑分类
+public function edit(){
+
+}
+//put.admin/category/{category}    更新分类
+public function update(){
+
+}

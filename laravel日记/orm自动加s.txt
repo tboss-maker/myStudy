@@ -1,0 +1,3 @@
+需要在ORM模型中规定表名,否则会自动加S
+
+    protected $table = 'user';
